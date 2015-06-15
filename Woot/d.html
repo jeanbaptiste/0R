@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+
+/* Tips for Elastic layouts 
+1. Since the elastic layouts overall sizing is based on the user's default fonts size, they are more unpredictable. Used correctly, they are also more accessible for those that need larger fonts size since the line length remains proportionate.
+2. Sizing of divs in this layout are based on the 100% font size in the body element. If you decrease the text size overall by using a font-size: 80% on the body element or the #container, remember that the entire layout will downsize proportionately. You may want to increase the widths of the various divs to compensate for this.
+3. If font sizing is changed in differing amounts on each div instead of on the overall design (ie: #sidebar1 is given a 70% font size and #mainContent is given an 85% font size), this will proportionately change each of the divs overall size. You may want to adjust based on your final font sizing.
+*/
+.oneColElsCtrHdr #container {
+	width: 46em;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColElsCtrHdr #header { 
+	background: #DDDDDD; 
+	padding: 0 10px 0 20px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+} 
+.oneColElsCtrHdr #header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+.oneColElsCtrHdr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	background: #FFFFFF;
+}
+.oneColElsCtrHdr #footer { 
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#DDDDDD;
+} 
+.oneColElsCtrHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+-->
+</style></head>
+
+<body class="oneColElsCtrHdr">
+
+<div id="container">
+  <div id="header">
+    <h1>0R@WOOT.2</h1>
+  <!-- end #header --></div>
+  <div id="mainContent">
+    <h1><img src="athanor.png" width="351" height="493" align="right" />slow electronics</h1>
+    <p>Dans la continuité de <a href="http://artlabo.org/0/">0.camp</a> à Nantes, nous (<a href="http://">collectif 0R</a>) fabriquons pour le <a href="http://wootdevices.io/">woot.devices.2</a> un petit circuit textile electronique musical (à base de 555 - apc style) en utilisant non pas une plaque FR1 rigide mais du tissu conducteur à base de nylon cuivré par electroplating (flectron) dont la forme sera découpée non pas avec une découpe laser mais par dégradation chimique du cuivre par une solution de vinaigre et de sel.</p>
+    <p>A Nantes nous avions déjà réussi à oxyder du Cu par de l'eau de mer (achetée au litre ! ) et du soleil par le principe ancestral de l'athanor, four cosmique alchimique. Nos résultats après un mois d'immersion étaient encourageant (notez la belle couleur bleue de l'oxyde de cuivre en solution).</p>
+    <p>&nbsp;</p>
+    <p><img src="salt.png" width="622" height="426" /></p>
+    <p>Sur la base du design d'une APC, nous avions en parallèle fabriqué des petits circuits sonores. Ils étaient tout rigides, nous les avons donc refait (mrt1) en version textile électronique (le but étant d'en faire une plateforme de prototypage électroextile - textilo) à l'aide de fil conducteur et d'une découpe laser.</p>
+    <p><img src="apc-rigid.png" width="648" height="490" /></p>
+    <p><img src="apc-souple.png" width="651" height="465" /></p>
+    <p>Afin de permettre à des personnes qui n'ont pas de découpe laser de refaire le circuit, nous réflechissons pour le woot.devices.2 à des alternatives. Nous en voyons trois:</p>
+    <ul>
+      <li>Découper au ciseau à la main ou avec un plotter le circuit</li>
+      <li>Etcher le circuit à l'aide d'un procédé chimique ou électrochimique.</li>
+      <li>Electroplater le circuit</li>
+    </ul>
+    <p>Dans le temps contraint d'une journée (samedi 6 juin 2015) nous avons choisi d'explorer la deuxième solution. Nous avons donc imprimé au laser un circuit sur du flectron contrecollé sur du papier A4 puis tenté d'etcher la board dans du vinaigre et du sel.</p>
+    <p><img src="verre.sel.papier.png" width="348" height="446" /></p>
+<h2>composant (NE555)</h2>
+    <p>Le 555 souvent dénommé NE555 est un composant très ancien mais très sympa pour faire des <strong>timers</strong> (fait un truc toutes les 7 secondes) ou, si on lui connecte une patte sur une autre faire des <strong>oscillateurs</strong> astables par feedback, et donc, si ça résonne assez vite et qu'on lui branche un haut-parleur, faire du <strong>son</strong>. Son concepteur (Hans Camenzind) décédé en 2012 est (fut) également l'auteur d'un <a href="http://www.amazon.com/Much-Ado-About-Almost-Nothing/dp/0615139957">très bon livre</a> d'introduction à l'électronique, dans le même genre que Forrest Mims.</p>
+    <p>La datasheet (feuille qui explique) du NE555 <a href="555.pdf">ici</a>.</p>
+    <p>Le footprint de la version <strong>DIP</strong> (dual-in-line package) c'est à dire avec 8 pattes. Notez que les <strong>dimensions sont en inches et entre parenthèses en mm</strong>.</p>
+    <p><img src="dip-555.png" width="674" height="700" alt="dip-555" /></p>
+    <h2>circuit (APC)</h2>
+    <p>J'ai pris celui de l'APC (atari punk console) de Jimmy P Rodgers, collaborateur régulier de Mitch Altman créateur de NoiseBridge à SF. L'APC est un grand classique, en gros, c'est une des microvariantes avec des gros boutons (knobs) du circuit de démo dans la datasheet du NE555.</p>
+    <p><img src="apc-jimmy-rodgers.png" width="442" height="303" alt="apc" /></p>
+    <p>Une précision: ce circuit est ici en Single Sided  (toutes les traces sur un seul coté) pour nous aider à fabriquer un truc que d'un coté, sans percer, juste en connectant (normalement en soudant mais dans notre cas en liant avec du textile) les composants sur le même plan, la même surface.</p>
+    <h2>textile conducteur (flectron)</h2>
+    <p>Le flectron est un grand classique du textile electronique. Originalement destiné à faire du shielding (de la protection) pour les personnes qui travaillent dans des milieux à forte radiation électromagnétique, il est aussi utilisé pour fabriquer des antennes, des bonnets anti-abduction par les extra-terrestres et aussi des vêtements électroniques car c'est un très bon conducteur.</p>
+    <p>Voici sa datasheet (acheté chez LessEMF aux USA)</p>
+    <p><img src="flectron.png" width="482" height="676" /></p>
+    <h2>process papier/textile collé imprimé laser</h2>
+    <p>Audrey (?) de Data Paulette à inventé ce process un peu punk mais très original qui consiste à <strong>coller du textile sur du papier qu'on met dans l'imprimante</strong> pour faire des imprimés textiles sur des lasers (comme celle de la blackboule) ou des jets d'encre.</p>
+    <p>Nous reprenons ici le même principe avec de la <strong>colle en spray</strong> qu'il ne faut pas trop respirer (j'ai eu des vertiges pendant une heure mais peut être était-ce à cause d'autre chose...°). Je l'ai collé directement sur le papier puis appliquer le flectron que j'avais coupé à l'arrache (et comme Maurin me l'a dit après, vu que ça coute cher, j'aurais pu en mettre moins, cqfd).</p>
+    <p>Voici le résultat :</p>
+    <p><img src="impression.png" width="485" height="364" /></p>
+    <h2>oxydation du cuivre par du sel et du vinaigre</h2>
+    <p>Mais combien de temps faudra-t-il attendre ?</p>
+    <p><img src="verre.png" width="367" height="487" /></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <!-- end #mainContent -->
+  </div>
+  <div id="footer">
+    <p>Licence<a href="http://p2pfoundation.net/Copyfarleft"> copyfarleft</a></p>
+  <!-- end #footer --></div>
+<!-- end #container --></div>
+</body>
+</html>
